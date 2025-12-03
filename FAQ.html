@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - اسم المتجر</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f3f3f3;
+            color: #111;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* رأس الصفحة */
+        header {
+            background-color: #232f3e;
+            padding: 15px 0;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* شريط التنقل */
+        .nav-tabs {
+            background-color: #37475A;
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .nav-tab {
+            padding: 12px 20px;
+            background-color: #37475A;
+            color: white;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-tab:hover {
+            background-color: #485769;
+        }
+        
+        .nav-tab.active {
+            background-color: #f0f0f0;
+            color: #111;
+            font-weight: bold;
+        }
+        
+        /* محتوى الصفحة */
+        .content {
+            background-color: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        h1 {
+            color: #232f3e;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #c45500;
+            margin: 25px 0 15px;
+            font-size: 20px;
+        }
+        
+        h3 {
+            color: #111;
+            margin: 20px 0 10px;
+            font-size: 16px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-right: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .last-updated {
+            color: #767676;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        /* تنسيقات الأسئلة الشائعة */
+        .faq-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e7e7e7;
+            padding-bottom: 20px;
+        }
+        
+        .faq-category:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #e7e7e7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: #f8f8f8;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 15px;
+            max-height: 500px;
+        }
+        
+        .search-box {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .search-box button {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #767676;
+        }
+        
+        .contact-promo {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact-promo a {
+            color: #007185;
+            text-decoration: none;
+        }
+        
+        .contact-promo a:hover {
+            text-decoration: underline;
+            color: #c45500;
+        }
+        
+        /* تذييل الصفحة */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-column a {
+            display: block;
+            color: #DDD;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #3a4553;
+            font-size: 14px;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">اسم المتجر</a>
+        </div>
+    </header>
+    
+    <!-- شريط التنقل بين الصفحات -->
+    <div class="nav-tabs">
+        <div class="container">
+            <button class="nav-tab" data-target="privacy">سياسة الخصوصية</button>
+            <button class="nav-tab" data-target="terms">شروط الاستخدام</button>
+            <button class="nav-tab active" data-target="faq">الأسئلة الشائعة</button>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="content">
+            <!-- قسم الأسئلة الشائعة -->
+            <section id="faq" class="content-section active">
+                <h1>الأسئلة الشائعة</h1>
+                <p class="last-updated">آخر تحديث: 1 يناير 2023</p>
+                
+                <div class="search-box">
+                    <input type="text" id="faq-search" placeholder="ابحث في الأسئلة الشائعة...">
+                    <button type="button">🔍</button>
+                </div>
+                
+                <div class="faq-category">
+                    <h2>الحساب والتسجيل</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">كيف يمكنني إنشاء حساب جديد؟</div>
+                        <div class="faq-answer">
+                            <p>لإنشاء حساب جديد، اتبع الخطوات التالية:</p>
+                            <ol>
+                                <li>انقر على "إنشاء حساب" في أعلى الصفحة</li>
+                                <li>أدخل اسمك وعنوان بريدك الإلكتروني وكلمة المرور</li>
+                                <li>اضغط على "إنشاء حساب"</li>
+                                <li>ستتلقى رسالة تأكيد على بريدك الإلكتروني</li>
+                                <li>انقر على رابط التأكيد في البريد لتفعيل حسابك</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">نسيت كلمة المرور، كيف يمكنني استعادتها؟</div>
+                        <div class="faq-answer">
+                            <p>لإعادة تعيين كلمة المرور:</p>
+                            <ol>
+                                <li>انقر على "تسجيل الدخول" في أعلى الصفحة</li>
+                                <li>انقر على "نسيت كلمة المرور"</li>
+                                <li>أدخل عنوان بريدك الإلكتروني المسجل لدينا</li>
+                                <li>ستتلقى رسالة تحتوي على رابط لإعادة تعيين كلمة المرور</li>
+                                <li>اتبع التعليمات في البريد الإلكتروني لإنشاء كلمة مرور جديدة</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">كيف يمكنني تحديث معلومات حسابي؟</div>
+                        <div class="faq-answer">
+                            <p>لتحديث معلومات حسابك:</p>
+                            <ol>
+                                <li>سجل الدخول إلى حسابك</li>
+                                <li>انقر على "حسابي" في القائمة العلوية</li>
+                                <li>اختر "معلومات الحساب"</li>
+                                <li>قم بتعديل المعلومات المطلوبة</li>
+                                <li>انقر على "حفظ التغييرات"</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h2>الطلبات والشحن</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">ما هي طرق الشحن المتاحة؟</div>
+                        <div class="faq-answer">
+                            <p>نحن نقدم عدة خيارات للشحن:</p>
+                            <ul>
+                                <li>الشحن العادي: 3-5 أيام عمل</li>
+                                <li>الشحن السريع: 1-2 أيام عمل</li>
+                                <li>الشحن الفوري: في نفس اليوم (في المدن الرئيسية)</li>
+                            </ul>
+                            <p>تختلف تكاليف الشحن حسب طريقة الشحن وحجم الطلب.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">كيف يمكنني تتبع طلبي؟</div>
+                        <div class="faq-answer">
+                            <p>لتتبع طلبك:</p>
+                            <ol>
+                                <li>سجل الدخول إلى حسابك</li>
+                                <li>اذهب إلى قسم "طلباتي"</li>
+                                <li>ابحث عن الطلب الذي تريد تتبعه وانقر عليه</li>
+                                <li>سترى حالة الطلب وتفاصيل التتبع</li>
+                            </ol>
+                            <p>يمكنك أيضًا استخدام رقم التتبع الذي أرسلناه إلى بريدك الإلكتروني على موقع شركة الشحن.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">هل يمكنني تعديل طلبي بعد وضعه؟</div>
+                        <div class="faq-answer">
+                            <p>يمكنك تعديل طلبك فقط قبل أن نقوم بتجهيزه للشحن. لتعديل طلبك:</p>
+                            <ol>
+                                <li>سجل الدخول إلى حسابك</li>
+                                <li>اذهب إلى قسم "طلباتي"</li>
+                                <li>إذا كان الطلب قابلاً للتعديل، سترى خيار "تعديل الطلب"</li>
+                                <li>قم بالتغييرات المطلوبة واحفظها</li>
+                            </ol>
+                            <p>إذا لم يكن خيار التعديل متاحًا، فقد يكون الطلب قيد التجهيز بالفعل. في هذه الحالة، يرجى الاتصال بنا في أقرب وقت ممكن.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h2>المدفوعات والفواتير</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">ما هي طرق الدفع المقبولة؟</div>
+                        <div class="faq-answer">
+                            <p>نحن نقبل طرق الدفع التالية:</p>
+                            <ul>
+                                <li>بطاقات الائتمان (فيزا، ماستركارد، أمريكان إكسبريس)</li>
+                                <li>بطاقات الخصم</li>
+                                <li>بايبال</li>
+                                <li>الدفع عند الاستلام (لمناطق محددة)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">كيف يمكنني الحصول على فاتورة؟</div>
+                        <div class="faq-answer">
+                            <p>لتحميل فاتورتك:</p>
+                            <ol>
+                                <li>سجل الدخول إلى حسابك</li>
+                                <li>اذهب إلى قسم "طلباتي"</li>
+                                <li>ابحث عن الطلب المطلوب وانقر عليه</li>
+                                <li>انقر على "تحميل الفاتورة"</li>
+                            </ol>
+                            <p>سيتم تحميل الفاتورة بصيغة PDF يمكنك طباعتها أو حفظها.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">هل معلومات الدفع الخاصة بي آمنة؟</div>
+                        <div class="faq-answer">
+                            <p>نعم، نحن نأخذ أمان معلوماتك على محمل الجد. نستخدم تقنية تشفير متقدمة (SSL) لحماية بياناتك أثناء نقلها. بالإضافة إلى ذلك، نحن نتوافق مع معايير أمان صناعة بطاقات الدفع (PCI DSS) لضمان معالجة آمنة لبيانات الدفع.</p>
+                            <p>لا نقوم بتخزين تفاصيل بطاقتك الائتمانية على خوادمنا بعد اكتمال المعاملة.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h2>الإرجاع والاستبدال</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">ما هي سياسة الإرجاع والاستبدال؟</div>
+                        <div class="faq-answer">
+                            <p>سياسة الإرجاع والاستبدال لدينا:</p>
+                            <ul>
+                                <li>يمكنك إرجاع معظم العناصر غير المفتوحة خلال 30 يومًا من الاستلام</li>
+                                <li>يجب أن تكون العناصر في حالتها الأصلية مع جميع العلامات والتغليف</li>
+                                <li>بعض المنتجات مثل المنتجات القابلة للتلف أو المنتجات الشخصية غير قابلة للإرجاع</li>
+                                <li>سيتم رد المبلغ إلى طريقة الدفع الأصلية خلال 5-10 أيام عمل من استلامنا للعنصر المرتجع</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">كيف يمكنني بدء عملية إرجاع؟</div>
+                        <div class="faq-answer">
+                            <p>لبدء عملية إرجاع:</p>
+                            <ol>
+                                <li>سجل الدخول إلى حسابك</li>
+                                <li>اذهب إلى قسم "طلباتي"</li>
+                                <li>اختر الطلب الذي يحتوي على العنصر الذي تريد إرجاعه</li>
+                                <li>انقر على "بدء إرجاع" بجانب العنصر</li>
+                                <li>اتبع التعليمات لإنشاء تذكرة إرجاع وطباعة ملصق الشحن</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-promo">
+                    <p>لم تجد إجابة لسؤالك؟ <a href="contact.html">اتصل بفريق الدعم لدينا</a> وسنكون سعداء بمساعدتك.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>اعرفنا أكثر</h4>
+                    <a href="#">معلومات عنا</a>
+                    <a href="#">الوظائف</a>
+                    <a href="#">أخبار الشركة</a>
+                </div>
+                <div class="footer-column">
+                    <h4>خدمة العملاء</h4>
+                    <a href="#">اتصل بنا</a>
+                    <a href="#">الشحن والتوصيل</a>
+                    <a href="#">الاستبدال والاسترجاع</a>
+                </div>
+                <div class="footer-column">
+                    <h4>روابط مهمة</h4>
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">شروط الاستخدام</a>
+                    <a href="faq.html">الأسئلة الشائعة</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 اسم المتجر. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // التحكم في التنقل بين علامات التبويب
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.content-section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار والأقسام
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // إضافة النشاط للزر المحدد والقسم المقابل
+                    this.classList.add('active');
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+            
+            // التحكم في فتح وإغلاق الأسئلة
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+                    
+                    // إغلاق جميع الإجابات الأخرى
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+                    
+                    // فتح الإجابة الحالية إذا لم تكن نشطة
+                    if (!isActive) {
+                        this.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+            
+            // وظيفة البحث في الأسئلة الشائعة
+            const searchInput = document.getElementById('faq-search');
+            const searchButton = document.querySelector('.search-box button');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                if (searchTerm === '') {
+                    // إظهار جميع الأسئلة إذا كان البحث فارغًا
+                    faqItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                    return;
+                }
+                
+                let foundResults = false;
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        foundResults = true;
+                        
+                        // فتح السؤال الذي يحتوي على نتيجة البحث
+                        item.querySelector('.faq-question').classList.add('active');
+                        item.querySelector('.faq-answer').classList.add('active');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                if (!foundResults) {
+                    alert('لم نعثر على أي نتائج تطابق بحثك. يرجى المحاولة بكلمات أخرى.');
+                }
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

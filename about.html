@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن أمازون - Amazon.com</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f3f3f3;
+            color: #0F1111;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007185;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #C7511F;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* الهيدر */
+        header {
+            background-color: #131A22;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #3a4553;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .logo span {
+            color: #FF9900;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #232F3E;
+            margin-bottom: 20px;
+            font-size: 28px;
+            border-bottom: 1px solid #e7e7e7;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #232F3E;
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .highlight-box {
+            background-color: #F2F8FC;
+            border-left: 4px solid #007185;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .value-item {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 4px;
+            border-top: 3px solid #FF9900;
+        }
+        
+        .value-item h3 {
+            color: #232F3E;
+            margin-bottom: 10px;
+        }
+        
+        /* الفوتر */
+        footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #DDD;
+            font-size: 14px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #3a4553;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* التجاوب مع الشاشات المختلفة */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">amazon<span>.sa</span></div>
+                <div class="nav-links">
+                    <a href="index.html">الصفحة الرئيسية</a>
+                    <a href="about.html" style="color: #FF9900;">عن الشركة</a>
+                    <a href="register.html">إنشاء حساب</a>
+                    <a href="privacy.html">سياسة الخصوصية</a>
+                    <a href="terms.html">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="main-content">
+            <h1>عن شركة أمازون</h1>
+            
+            <p>أمازون هي شركة تكنولوجيا أمريكية متعددة الجنسيات تركز على التجارة الإلكترونية، والحوسبة السحابية، والبث الرقمي، والذكاء الاصطناعي. وهي واحدة من أكبر الشركات في العالم من حيث القيمة السوقية والإيرادات.</p>
+            
+            <div class="highlight-box">
+                <p><strong>رسالتنا:</strong> أن نكون أكثر الشركات تركيزًا على العملاء في العالم، حيث يمكن للعملاء العثور على أي شيء يريدون شراءه عبر الإنترنت.</p>
+            </div>
+            
+            <h2>تاريخنا</h2>
+            <p>تأسست أمازون في 5 يوليو 1994 من قبل جيف بيزوس في مرآب بمنزله في سياتل. بدأت كمتجر لبيع الكتب عبر الإنترنت، وسرعان ما توسعت لتشمل مجموعة واسعة من المنتجات والخدمات.</p>
+            
+            <h2>قيمنا</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>التركيز على العميل</h3>
+                    <p>نبدأ باحتياجات العملاء ونعمل للخلف، ونبتكر باستمرار نيابة عنهم.</p>
+                </div>
+                <div class="value-item">
+                    <h3>الابتكار</h3>
+                    <p>نتوقع متطلبات العملاء المستقبلية ونبتكر لتحسين تجربتهم.</p>
+                </div>
+                <div class="value-item">
+                    <h3>التنوع والشمول</h3>
+                    <p>نحن ملتزمون ببناء ثقافة شاملة حيث يمكن للموظفين من جميع الخلفيات النجاح.</p>
+                </div>
+                <div class="value-item">
+                    <h3>الاستدامة</h3>
+                    <p>نسعى لتقليل بصمتنا البيئية والاستثمار في مستقبل مستدام.</p>
+                </div>
+            </div>
+            
+            <h2>أمازون في العالم العربي</h2>
+            <p>دخلت أمازون السوق العربي من خلال الاستحواذ على سوق.كوم في عام 2017، مما وسع نطاق وصولها إلى الملايين من العملاء في جميع أنحاء المنطقة. نحن ملتزمون بخدمة العملاء العرب وتقديم تجربة تسوق استثنائية تلبي احتياجاتهم وتوقعاتهم.</p>
+            
+            <h2>لماذا تختار أمازون؟</h2>
+            <p>نحن نقدم مجموعة واسعة من المنتجات، وأسعار تنافسية، وتوصيل سريع وموثوق، وخدمة عملاء متميزة على مدار الساعة طوال أيام الأسبوع. تجربة التسوق مع أمازون مصممة لتكون آمنة، وسهلة، وممتعة.</p>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div>
+                    <h4>اعرف المزيد عنا</h4>
+                    <ul>
+                        <li><a href="about.html">عن أمازون</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">أخبار الشركة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>الدفع والشحن</h4>
+                    <ul>
+                        <li><a href="#">طرق الدفع</a></li>
+                        <li><a href="#">خيارات الشحن</a></li>
+                        <li><a href="#">تتبع الطلبات</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>المساعدة</h4>
+                    <ul>
+                        <li><a href="#">خدمة العملاء</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>القوانين والسياسات</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="#">إرجاع المنتجات</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2023 أمازون.كوم</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
