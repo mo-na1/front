@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- أضف هذا داخل <head> اثبات الملكيه -->
+<meta name="google-site-verification" content="w3qm_U7FFiho0K8xJYc5qPyiZ7eo29l4fdydhPQPN-Q" />
+<!-- أضف في <head>  ربط الموقع ب حسابات التواصل-->
+<link rel="canonical" href="https://cosmic-flan-a75b0b.netlify.app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روضة القرآن - تعليم القرآن الكريم أونلاين</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Reset وتحديد الأساسيات */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #57cc99;
+            --accent-color: #ff9a3c;
+            --light-color: #f8f9fa;
+            --dark-color: #2d3436;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f7fa;
+            direction: rtl;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #144c63;
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #46b383;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e68935;
+        }
+        
+        /* رأس الصفحة */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-icon::before {
+            content: "";
+            background-image: url('https://img.pikbest.com/origin/10/43/64/17HpIkbEsTn5d.jpg!w700wp');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a.active {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -5px;
+            right: 0;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* القسم الرئيسي */
+        .hero {
+            background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(26, 95, 122, 0.9)), url('https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        /* ميزات الموقع */
+        .features {
+            background-color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* الدورات */
+        .courses {
+            background-color: #f8f9fa;
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .course-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .course-price {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* المدرسون */
+        .teachers {
+            background-color: white;
+        }
+        
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .teacher-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .teacher-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .teacher-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+        }
+        
+        .teacher-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .teacher-title {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* صور الأطفال */
+        .children-gallery {
+            background-color: #f8f9fa;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 280px;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* التسجيل */
+        .registration {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(26, 95, 122, 0.9)), url('https://i.pinimg.com/originals/1d/c8/e5/1dc8e541808faa9411215a102bb50fff.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .registration .section-title h2,
+        .registration .section-title p {
+            color: white;
+        }
+        
+        .registration .section-title::after {
+            background-color: var(--accent-color);
+        }
+        
+        .registration-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .registration-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .price-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .price-tag h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .price-tag p {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+        }
+        
+        /* الصفحات الأخرى */
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-content {
+            background-color: white;
+            padding: 60px 0;
+        }
+        
+        .about-content, .contact-content, .courses-page {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content p, .contact-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .about-grid, .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-form p {
+            margin-bottom: 25px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        /* تذييل الصفحة */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            right: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links li a:hover {
+            color: var(--secondary-color);
+            padding-right: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+                gap: 0;
+            }
+            
+            nav ul li {
+                margin-bottom: 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* أنماط للصفحات المخفية */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>روضة القرآن</h1>
+                    <p>تعليم القرآن الكريم أونلاين</p>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">عن الموقع</a></li>
+                    <li><a href="#" class="nav-link" data-page="courses">الدورات</a></li>
+                    <li><a href="#" class="nav-link" data-page="children">أطفالنا</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></li>
+                    <li><a href="#" class="btn btn-secondary" id="registerBtn">سجل الآن</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- الصفحة الرئيسية -->
+    <main id="home" class="page active">
+        <!-- القسم الرئيسي -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>روضة القرآن - بوابة تعليم القرآن الكريم أونلاين</h2>
+                    <p>نقدم لكم أفضل المناهج لتعليم القرآن الكريم، التجويد، والقراءات عبر الإنترنت مع مدرسين مؤهلين ومعتمدين. ابدأ رحلتك مع القرآن اليوم وارتقِ بمستواك في تلاوة وحفظ كتاب الله.</p>
+                    <div class="hero-btns">
+                        <a href="#registration" class="btn btn-accent">سجل في دورتنا المجانية</a>
+                        <a href="#courses" class="btn btn-secondary">استعرض الدورات</a>
+                    </div>
+                    
+                    <div class="price-tag">
+                        <h3>سعر الحصة: 5 دولار فقط للساعة</h3>
+                        <p>أفضل جودة تعليمية بأقل تكلفة ممكنة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الميزات -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>مميزات روضة القرآن</h2>
+                    <p>نقدم لكم تجربة تعليمية فريدة ومتكاملة تجمع بين الأصالة والتقنية الحديثة</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>مدرسون معتمدون</h3>
+                        <p>فريق من المدرسين المؤهلين والمعتمدين من جهات قرآنية موثوقة مع خبرة طويلة في تدريس القرآن الكريم للأطفال</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h3>تعلم عن بعد</h3>
+                        <p>تعلم من أي مكان وفي أي وقت يناسبك عبر منصتنا المتطورة مع إمكانية تسجيل الدروس والمراجعة</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>أسعار مناسبة</h3>
+                        <p>نقدم أفضل جودة تعليمية بأقل تكلفة ممكنة. الحصة ساعة واحدة مقابل 5 دولار فقط</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الدورات -->
+        <section class="courses" id="courses">
+            <div class="container">
+                <div class="section-title">
+                    <h2>دوراتنا التعليمية</h2>
+                    <p>اختر الدورة التي تناسب عمر طفلك وأهدافه في تعلم القرآن الكريم</p>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-price">5$ للساعة</div>
+                        <div class="course-img" style="background-image: url('https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg');"></div>
+                        <div class="course-content">
+                            <h3>تعليم القرآن للأطفال</h3>
+                            <p>دورة شاملة لتعليم القرآن الكريم للأطفال من الصفر، تشمل تعلم الأحرف والحركات والقراءة الصحيحة بأسلوب مبسط</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> 3 أشهر</span>
+                                <span><i class="fas fa-user-friends"></i> 5-7 سنوات</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-price">5$ للساعة</div>
+                        <div class="course-img" style="background-image: url('https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png');"></div>
+                        <div class="course-content">
+                            <h3>أحكام التجويد للأطفال</h3>
+                            <p>دورة مبسطة في أحكام التجويد للأطفال تشمل النون الساكنة والتنوين، المدود والأحكام الأساسية بأسلوب جذاب</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> 4 أشهر</span>
+                                <span><i class="fas fa-user-friends"></i> 8-12 سنة</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-price">5$ للساعة</div>
+                        <div class="course-img" style="background-image: url('https://is5-ssl.mzstatic.com/image/thumb/Purple6/v4/61/5e/df/615edf86-55ac-e51a-1da2-23535b0f2590/mzl.dzhdnzpu.png/0x0ss-85.jpg');"></div>
+                        <div class="course-content">
+                            <h3>حفظ القرآن للصغار</h3>
+                            <p>برنامج متكامل لحفظ القرآن الكريم للأطفال مع مراجعة وضبط الحفظ وفق خطة منظمة ومشجعة تناسب أعمارهم</p>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> حسب المستوى</span>
+                                <span><i class="fas fa-user-friends"></i> 6-14 سنة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المدرسون -->
+        <section class="teachers" id="teachers">
+            <div class="container">
+                <div class="section-title">
+                    <h2>مدرسونا المعتمدون</h2>
+                    <p>فريق من المدرسين المؤهلين والمرخصين لتدريس القرآن الكريم للأطفال</p>
+                </div>
+                
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <div class="teacher-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>مدرس قرآن معتمد</h3>
+                        <div class="teacher-title">مدرس تجويد وقراءات</div>
+                        <p>حاصل على إجازة في القراءات العشر من الأزهر الشريف، خبرة 15 عاماً في تدريس القرآن والتجويد للأطفال</p>
+                    </div>
+                    
+                    <div class="teacher-card">
+                        <div class="teacher-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>مدرسة قرآن معتمدة</h3>
+                        <div class="teacher-title">مدرسة حفظ وتلاوة</div>
+                        <p>حافظة للقرآن الكريم مجازة بسند متصل، متخصصة في تعليم حفظ القرآن للأطفال بأسلوب مبسط وجذاب</p>
+                    </div>
+                    
+                    <div class="teacher-card">
+                        <div class="teacher-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>مدرس أحكام التلاوة</h3>
+                        <div class="teacher-title">مدرس أحكام التلاوة</div>
+                        <p>متخصص في علم التجويد وأحكام التلاوة للأطفال، حاصل على ماجستير في الدراسات القرآنية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- صور الأطفال -->
+        <section class="children-gallery" id="children-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>أطفالنا مع القرآن</h2>
+                    <p>صور من أنشطة أطفالنا في تعلم وحفظ القرآن الكريم</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg" alt="طفل يقرأ القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png" alt="طفل متدبر في القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple6/v4/61/5e/df/615edf86-55ac-e51a-1da2-23535b0f2590/mzl.dzhdnzpu.png/0x0ss-85.jpg" alt="أطفال في حلقة قرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/originals/1d/c8/e5/1dc8e541808faa9411215a102bb50fff.jpg" alt="أطفال يتعلمون القرآن">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التسجيل -->
+        <section class="registration" id="registration">
+            <div class="container">
+                <div class="section-title">
+                    <h2>سجل أطفالك الآن</h2>
+                    <p>انضم إلى مئات الأطفال الذين بدأوا رحلتهم مع القرآن الكريم من خلال منصتنا</p>
+                </div>
+                
+                <div class="registration-content">
+                    <p>سجل الآن في دورة مجانية تجريبية لمدة أسبوعين لتعرف مدى جودة مناهجنا وكفاءة مدرسينا. املأ النموذج التالي وسنتصل بك في أقرب وقت</p>
+                    
+                    <div class="price-tag">
+                        <h3>سعر الحصة: 5 دولار فقط للساعة</h3>
+                        <p>خصم 10% عند التسجيل في أكثر من حصة أسبوعياً</p>
+                    </div>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz97XIoeznGwvJXdb3WwgIB7fUnFYh2pNS2aimW1m6XzZm7Q/viewform?usp=header" target="_blank" class="btn btn-accent" style="font-size: 1.3rem; padding: 15px 40px;">سجل عبر نموذج جوجل</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- صفحة عن الموقع -->
+    <section id="about" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>عن روضة القرآن</h1>
+                <p>منصة تعليمية رائدة في تعليم القرآن الكريم للأطفال عبر الإنترنت</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="about-content">
+                    <p>تأسست روضة القرآن عام 2020 بهدف تقديم خدمة تعليم القرآن الكريم للأطفال عبر الإنترنت بأعلى معايير الجودة، لتصل إلى كل طفل راغب في تعلم كتاب الله تعالى في أي مكان في العالم.</p>
+                    
+                    <p>نحن نؤمن بأن تعليم القرآن الكريم للأطفال حق لهم، وأن التكنولوجيا الحديثة يمكن أن تكون وسيلة فعّالة لنشر هذا العلم النافع. لذلك عملنا على تطوير منصة تعليمية متكاملة تجمع بين الأصالة في المناهج والحداثة في الوسائل التعليمية المناسبة للأطفال.</p>
+                    
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <h3>رؤيتنا</h3>
+                            <p>أن نكون المنصة الرائدة عالمياً في تعليم القرآن الكريم للأطفال عبر الإنترنت، وأن نصل بمئات الآلاف من الأطفال إلى إتقان تلاوة وحفظ كتاب الله تعالى خلال السنوات القادمة.</p>
+                        </div>
+                        
+                        <div class="about-item">
+                            <h3>رسالتنا</h3>
+                            <p>توفير تعليم قرآني متميز للأطفال عبر الإنترنت، باستخدام أحدث الوسائل التقنية وأفضل المناهج التعليمية المخصصة للأطفال، مع الالتزام بالأصالة العلمية والجودة في الأداء.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px; color: var(--primary-color);">إحصائيات عنا</h3>
+                    <div class="features-grid" style="margin-top: 20px;">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3>+2000 طفل</h3>
+                            <p>أكثر من 2000 طفل وطفلة من مختلف أنحاء العالم يدرسون في منصتنا</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>12 مدرساً</h3>
+                            <p>فريق من المدرسين المؤهلين والمعتمدين المتخصصين في تدريس الأطفال</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h3>5 دولار للساعة</h3>
+                            <p>أفضل جودة تعليمية بأقل سعر ممكن. الحصة ساعة واحدة مقابل 5 دولار فقط</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- صفحة الدورات -->
+    <section id="courses-page" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>جميع الدورات</h1>
+                <p>استعرض دوراتنا التعليمية المتكاملة واختر ما يناسب أطفالك</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="courses-page">
+                    <div class="section-title">
+                        <h2>برامجنا التعليمية للأطفال</h2>
+                        <p>نقدم مجموعة متنوعة من البرامج والدورات التي تلبي احتياجات جميع الأعمار والمستويات</p>
+                    </div>
+                    
+                    <div style="text-align: center; margin-bottom: 40px; background-color: #f8f9fa; padding: 25px; border-radius: var(--border-radius);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">سعر الحصة: 5 دولار فقط للساعة</h3>
+                        <p style="font-size: 1.2rem;">خصومات خاصة للتسجيل في أكثر من حصة أسبوعياً أو لأكثر من طفل</p>
+                    </div>
+                    
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg');"></div>
+                            <div class="course-content">
+                                <h3>تعليم القرآن للأطفال (5-7 سنوات)</h3>
+                                <p>دورة شاملة لتعليم القرآن الكريم من الصفر للأطفال الصغار، تشمل تعلم الأحرف والحركات والقراءة الصحيحة بأسلوب مبسط</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 3 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> 5-7 سنوات</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png');"></div>
+                            <div class="course-content">
+                                <h3>أحكام التجويد للأطفال (8-12 سنة)</h3>
+                                <p>دورة مبسطة في أحكام التجويد للأطفال تشمل النون الساكنة والتنوين، المدود والأحكام الأساسية بأسلوب جذاب</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 4 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> 8-12 سنة</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://is5-ssl.mzstatic.com/image/thumb/Purple6/v4/61/5e/df/615edf86-55ac-e51a-1da2-23535b0f2590/mzl.dzhdnzpu.png/0x0ss-85.jpg');"></div>
+                            <div class="course-content">
+                                <h3>حفظ الجزء الأخير من القرآن</h3>
+                                <p>برنامج مخصص لحفظ الجزء الثلاثين من القرآن الكريم (عمّ) مع مراجعة وضبط الحفظ وفق خطة منظمة ومشجعة</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 6 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> 7-14 سنة</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://i.pinimg.com/originals/1d/c8/e5/1dc8e541808faa9411215a102bb50fff.jpg');"></div>
+                            <div class="course-content">
+                                <h3>القصص القرآنية المصورة</h3>
+                                <p>دورة تعليمية تفاعلية تقدم قصص الأنبياء والرسل من القرآن الكريم بأسلوب مصور وجذاب يناسب الأطفال</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 3 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> 6-12 سنة</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg');"></div>
+                            <div class="course-content">
+                                <h3>القرآن والتربية الإسلامية</h3>
+                                <p>برنامج متكامل يجمع بين تعليم القرآن والأخلاق الإسلامية والعبادات بأسلوب تربوي يناسب الأطفال</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 8 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> 8-15 سنة</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card">
+                            <div class="course-price">5$ للساعة</div>
+                            <div class="course-img" style="background-image: url('https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png');"></div>
+                            <div class="course-content">
+                                <h3>مسابقة القرآن السنوية</h3>
+                                <p>برنامج تحفيزي لمسابقة حفظ وتلاوة القرآن الكريم مع جوائز قيمة وتكريم للمتميزين من الأطفال</p>
+                                <div class="course-meta">
+                                    <span><i class="far fa-clock"></i> 10 أشهر</span>
+                                    <span><i class="fas fa-user-friends"></i> جميع الأعمار</span>
+                                </div>
+                                <a href="#registration" class="btn" style="margin-top: 15px; width: 100%;">سجل الآن</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- صفحة أطفالنا -->
+    <section id="children" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>أطفالنا مع القرآن</h1>
+                <p>شاهدوا أجمل اللحظات من رحلة أطفالنا مع تعلم القرآن الكريم</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="section-title">
+                    <h2>لحظات تعلم مميزة</h2>
+                    <p>صور من أنشطة أطفالنا في تعلم وحفظ القرآن الكريم في منصتنا</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg" alt="طفل يقرأ القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png" alt="طفل متدبر في القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple6/v4/61/5e/df/615edf86-55ac-e51a-1da2-23535b0f2590/mzl.dzhdnzpu.png/0x0ss-85.jpg" alt="أطفال في حلقة قرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/originals/1d/c8/e5/1dc8e541808faa9411215a102bb50fff.jpg" alt="أطفال يتعلمون القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/b8/7b/7d/b87b7d9ec50f452f8a25f8ddf14eefd7.jpg" alt="طفل مع مصحف">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://png.pngtree.com/png-vector/20240715/ourlarge/pngtree-pious-child-is-reading-the-koran-png-image_13095117.png" alt="طفل يحفظ القرآن">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple6/v4/61/5e/df/615edf86-55ac-e51a-1da2-23535b0f2590/mzl.dzhdnzpu.png/0x0ss-85.jpg" alt="حلقة قرآنية">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/originals/1d/c8/e5/1dc8e541808faa9411215a102bb50fff.jpg" alt="أطفال يقرأون القرآن">
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px;">انضم إلى أطفالنا المميزين</h3>
+                    <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px;">سجل طفلك الآن في دوراتنا ليبدأ رحلة مميزة مع كتاب الله تعالى ويتعلم في بيئة آمنة ومناسبة لعمره</p>
+                    
+                    <div style="background-color: #f8f9fa; padding: 25px; border-radius: var(--border-radius); max-width: 600px; margin: 0 auto 30px;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 10px;">سعر الحصة: 5 دولار فقط للساعة</h4>
+                        <p>خصم 10% عند التسجيل في أكثر من حصة أسبوعياً</p>
+                    </div>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz97XIoeznGwvJXdb3WwgIB7fUnFYh2pNS2aimW1m6XzZm7Q/viewform?usp=header" target="_blank" class="btn btn-accent" style="font-size: 1.3rem; padding: 15px 40px;">سجل طفلك الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- صفحة اتصل بنا -->
+    <section id="contact" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>اتصل بنا</h1>
+                <p>نرحب باستفساراتكم ونسعد بتواصلكم معنا</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="contact-content">
+                    <p>إذا كان لديك أي استفسار حول دوراتنا أو تحتاج إلى مساعدة في اختيار البرنامج المناسب لطفلك، فلا تتردد في التواصل معنا. فريق الدعم لدينا مستعد لمساعدتك على مدار الساعة.</p>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-form">
+                            <h3>تواصل معنا عبر النموذج</h3>
+                            <p>املأ النموذج التالي وسنرد عليك في أقرب وقت ممكن للإجابة على استفساراتك</p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz97XIoeznGwvJXdb3WwgIB7fUnFYh2pNS2aimW1m6XzZm7Q/viewform?usp=header" target="_blank" class="btn btn-accent" style="font-size: 1.2rem; padding: 15px 40px; width: 100%;">اذهب إلى نموذج الاتصال</a>
+                            
+                            <div style="margin-top: 30px; padding: 20px; background-color: white; border-radius: var(--border-radius); border: 2px solid var(--accent-color);">
+                                <h4 style="color: var(--primary-color); margin-bottom: 10px;">سعر الحصة</h4>
+                                <p style="margin-bottom: 10px; font-weight: bold; font-size: 1.2rem;">5 دولار فقط للساعة</p>
+                                <p style="font-size: 0.9rem; color: #666;">خصم 10% عند التسجيل في أكثر من حصة أسبوعياً</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h3>معلومات الاتصال</h3>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4>العنوان</h4>
+                                    <p>القاهرة، مصر</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4>الهاتف</h4>
+                                    <p>+20 123 456 7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>البريد الإلكتروني</h4>
+                                    <p>info@rawdatalquran.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div>
+                                    <h4>سعر الحصة</h4>
+                                    <p>5 دولار للساعة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>روضة القرآن</h3>
+                    <p>منصة تعليمية رائدة في تعليم القرآن الكريم للأطفال عبر الإنترنت، نسعى لنشر العلم النافع وتسهيل تعلم القرآن للأطفال في أي مكان.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-link" data-page="home">الرئيسية</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">عن الموقع</a></li>
+                        <li><a href="#" class="nav-link" data-page="courses">الدورات</a></li>
+                        <li><a href="#" class="nav-link" data-page="children">أطفالنا</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>الدورات والأسعار</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">تعليم القرآن للأطفال</a></li>
+                        <li><a href="#">أحكام التجويد للأطفال</a></li>
+                        <li><a href="#">حفظ الجزء الأخير</a></li>
+                        <li><a href="#">القصص القرآنية المصورة</a></li>
+                        <li style="color: var(--accent-color); font-weight: bold;">سعر الحصة: 5 دولار للساعة</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>اتصل بنا</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</li>
+                        <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> info@rawdatalquran.com</li>
+                        <li><i class="fas fa-money-bill-wave"></i> الحصة: 5 دولار للساعة</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; روضة القرآن 2023 | سعر الحصة: 5 دولار للساعة | مصمم بحب ❤️ لخدمة كتاب الله</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript للتحكم في الموقع
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر DOM
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const registerBtn = document.getElementById('registerBtn');
+            
+            // تفعيل/إلغاء تفعيل القائمة المتحركة
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // التنقل بين الصفحات
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // إغلاق القائمة المتحركة إذا كانت مفتوحة
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    // الحصول على صفحة الهدف
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // تحديث حالة الروابط النشطة
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // إظهار الصفحة المحددة وإخفاء الآخرين
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                        
+                        if (page.id === targetPage || 
+                           (targetPage === 'courses' && page.id === 'courses-page')) {
+                            page.classList.add('active');
+                            
+                            // التمرير إلى أعلى الصفحة
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                    
+                    // معالجة خاصة لزر التسجيل
+                    if (this.id === 'registerBtn') {
+                        // إعادة تعيين الروابط النشطة
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        document.querySelector('[data-page="home"]').classList.add('active');
+                        
+                        // إظهار الصفحة الرئيسية
+                        pages.forEach(page => {
+                            page.classList.remove('active');
+                            if (page.id === 'home') page.classList.add('active');
+                        });
+                        
+                        // التمرير إلى قسم التسجيل
+                        document.getElementById('registration').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // زر التسجيل الرئيسي
+            registerBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // إعادة تعيين الروابط النشطة
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                document.querySelector('[data-page="home"]').classList.add('active');
+                
+                // إظهار الصفحة الرئيسية
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                    if (page.id === 'home') page.classList.add('active');
+                });
+                
+                // التمرير إلى قسم التسجيل
+                document.getElementById('registration').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+            
+            // التنقل السلس للروابط الداخلية
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener('click', function(e) {
+                if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+            
+            // تأثير التمرير على رأس الصفحة
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            // تنشيط روابط السوشيال ميديا في التذييل
+            document.querySelectorAll('.social-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // السماح للرابط بالعمل بشكل طبيعي (يفتح في علامة تبويب جديدة)
+                    // لا حاجة لمنع السلوك الافتراضي هنا
+                });
+            });
+        });
+    </script>
+</body>
+</html>
